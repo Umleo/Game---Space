@@ -3,15 +3,18 @@
     padding: 0%;
     box-sizing: border-box;
 }
+body{
+    margin: 0;
+}
 
 .game{
     background:url(Img/espaco.jpg);
     background-size: cover;
     position: relative;
     margin: 0 auto;
-    margin-top: 5%;
+    margin-top: 0%;
     width: 90%;
-    height: 800px;
+    height: 790px;
     border: 1px solid black;
     overflow: hidden;
 }
@@ -109,6 +112,10 @@
 .comom2Animation{
     animation: comom2 1s  linear infinite
 }
+.comom3Animation{
+    animation: comom3 700ms  linear infinite
+}
+
 
 
 @keyframes comom {
@@ -127,6 +134,15 @@
        left:0%;
     }
 }
+@keyframes comom3 {
+    0%{
+       left:100% 
+    }
+    100%{
+       left:0%;
+    }
+}
+
 
 
 

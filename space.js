@@ -158,9 +158,13 @@ var meteor3= document.querySelector('.rock3')
 var meteor4= document.querySelector('.rock4')
 var meteor5= document.querySelector('.rock5')
 
+var speed_meteor= document.querySelector('.rock2')
+var speed_meteor2= document.querySelector('.rock3')
+var speed_meteor3= document.querySelector('.rock4')
 
 
- var meteoro = [meteor, meteor2, meteor3, meteor4, meteor5]
+
+ var meteoro = [ meteor3, meteor4, meteor5]
      setInterval(()=>{
       let line = (meteoro[Math.floor((Math.random() * meteoro.length))])
   
@@ -171,7 +175,7 @@ var meteor5= document.querySelector('.rock5')
         }, 1000)
      }, 1000)
 
-var meteoro2 = [meteor, meteor2, meteor3, meteor4, meteor5]
+var meteoro2 = [meteor, meteor2, meteor5]
      setInterval(()=>{
       let line = (meteoro2[Math.floor((Math.random() * meteoro2.length))])
   
@@ -181,37 +185,86 @@ var meteoro2 = [meteor, meteor2, meteor3, meteor4, meteor5]
             line.classList.remove('comom2Animation')
         }, 1000)
      }, 1000)
+     
+var speed_rock = [speed_meteor, speed_meteor2, speed_meteor3]
+     setInterval(()=>{
+      let line = (speed_rock[Math.floor((Math.random() * speed_rock.length))])
+  
+     line.classList.add('comom3Animation')
+         setTimeout(()=>{
+        
+            line.classList.remove('comom3Animation')
+        }, 680)
+     }, 680)
 
 
 
-// const gameover = setInterval(()=>{
+
+const gameover = setInterval(()=>{
     
-//     meteorposition = meteor.offsetLeft;
-//     meteor2position = meteor2.offsetLeft;
-//     meteor3position = meteor3.offsetLeft;
-//     meteor4position = meteor4.offsetLeft;
-//     meteor5position = meteor5.offsetLeft;
+    meteorposition = meteor.offsetLeft;
+    meteor2position = meteor2.offsetLeft;
+    meteor3position = meteor3.offsetLeft;
+    meteor4position = meteor4.offsetLeft;
+    meteor5position = meteor5.offsetLeft;
 
-//     lineWidth = line1.clientWidth
-//     line2Width = line2.clientWidth
-//     line3Width = line3.clientWidth
-//     line4Width = line4.clientWidth
-//     line5Width = line5.clientWidth
+    console.log(meteorposition)
 
-//     console.log(meteorposition)
 
-//     if(meteorposition == 108 || meteorposition == 118 & lineWidth == 133){
-//         alert('gameover')
-//      }else if(meteor2position == 108 || meteor2position == 118 & line2Width == 133){
-//         alert('gameover')
-//     }else if(meteor3position == 108 || meteor3position == 118 & line3Width == 133){
-//         alert('gameover')
-//     }else if(meteor4position == 108 || meteor4position == 118 & line4Width == 133){
-//         alert('gameover')
-//     }else if(meteor5position == 108 || meteor5position == 118 & line5Width == 133){
-//         alert('gameover')
-//     }
-// }, 10)
+    lineWidth = line1.clientWidth
+    line2Width = line2.clientWidth
+    line3Width = line3.clientWidth
+    line4Width = line4.clientWidth
+    line5Width = line5.clientWidth
+
+
+    if(meteorposition == 119 & lineWidth == 133){
+        alert('gameover')
+        location.reload()
+     }else if(meteor2position == 119 & line2Width == 133){
+        alert('gameover')
+        location.reload()
+
+    }else if(meteor3position == 119 & line3Width == 133){
+        alert('gameover')
+        location.reload()
+
+    }else if(meteor4position == 119 & line4Width == 133){
+        alert('gameover')
+        location.reload()
+
+    }else if(meteor5position == 119 & line5Width == 133){
+        alert('gameover')
+        location.reload()
+
+    }
+}, 10)
+
+const gameover2 = setInterval(()=>{
+    
+    speedposition = speed_meteor.offsetLeft
+    speedposition2 = speed_meteor2.offsetLeft
+    speedposition3 = speed_meteor3.offsetLeft
+
+    //console.log(speedposition3)
+    //console.log(speedposition, '1')
+    //console.log(speedposition2, '2')
+
+
+    if(speedposition == 102 && line2Width == 133){
+        alert('gamoverspeed1')
+        location.reload()
+
+    }else if(speedposition2 == 102 && line3Width == 133){
+        alert('gameoverspeed3')
+        location.reload()
+
+    }else if(speedposition3 == 102  && line4Width == 133){
+        alert('gameoverspeed2')
+        location.reload()
+
+    }
+}, 5)
 
 
 
